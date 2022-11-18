@@ -5,37 +5,22 @@ app.component('generator', {
   template:
       /*html*/
       `
-<div style="
-position:absolute;
-width: 50%;
-height: 100%;
-top:50%;
-left:50%;
--webkit-transform: translate(-50%, -50%);
-transform: translate(-50%, -50%);
-">
-  <h1>&emsp;Generator tekstu przebranżowienia się na programistę 2.0.2.2</h1>
-<div style="
-word-wrap: break-word; 
-line-height: 139%; 
-font-family: Arial, Verdana, Helvetica, sans-serif; 
-font-size: 1rem;
-font-weight: 400;
-text-align: left; 
-border-bottom-left-radius: 4px;
-border-bottom-right-radius: 4px;
-border-top-left-radius: 4px;
-border-top-right-radius: 4px;
-border: 1px solid rgb(221, 221, 221);
-margin: 4px;
-padding: 18px;
-">
-  
-  <p>
-    <span id="hello" @click="generatorHello">{{ hello }}</span>
-  </p>
-  <p>&emsp;
-    <span id="entry" @click="generatorEntry">{{entry}}&nbsp;</span>
+<div class="row flex-top justify-content-center">
+
+<header class="border shadow">
+  <h1>Generator tekstu przebranżowienia się na programistę.</h1>
+  <h2>Wersja: 2.0.2.2.1.1</h2>
+</header>
+
+</div>
+<div class="row justify-content-center">
+<button id="button" class="btn-large" @click="generator">Generuj nowy tekst!</button>
+</div>
+<div class="row justify-content-center">
+  <main class="card border shadow">
+  <p class="card-body">
+    <span id="hello" @click="generatorHello">{{ hello }}<br/></span>
+    <span id="entry" @click="generatorEntry">&emsp;{{entry}}&nbsp;</span>
     <span id="entry2" @click="generatorEntry2">{{entry2}}&nbsp;</span>
     <span id="entry3" @click="generatorEntry3">{{entry3}}&nbsp;</span>
     <span id="startDesire" @click="generatorStartDesire">{{startDesire}}&nbsp;</span>
@@ -49,17 +34,11 @@ padding: 18px;
     <span id="language" @click="generatorLanguage">{{language}}&nbsp;</span>
     <span id="languageSelectionEnd" @click="generatorLanguageSelectionEnd">{{languageSelectionEnd}}&nbsp;</span>
   </p>
+  </main>
+
 </div>
-<div style="
-display: flex;
-justify-content: center;
-align-items: center;
-margin-top: 10px;
-height: 100px;
-">
-  <button @click="generator">Generuj nowy tekst!</button>
-</div>
-</div>
+
+
 `,
 
   data() {
@@ -101,7 +80,7 @@ height: 100px;
             'Witam forumowiczów.',
             'Witam serdecznie.',
             'Witam wszystkich.',
-            'Witam wszystkich uzytkowników forum :D',
+            'Witam wszystkich użytkowników forum :D',
             'Witam.',
           ],
           entryData: [
